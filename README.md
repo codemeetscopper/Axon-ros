@@ -35,6 +35,27 @@ Store the admin token at `~/.axon/admin_token` (Pi and laptop). Admin-gated acti
 
 ## Bringup
 
+### Pi (Domain 42, Native)
+
+Use this path to run ROS 2 Humble directly on Raspberry Pi OS.
+
+```bash
+./scripts/pi_native_setup.sh --non-interactive
+source /opt/ros/humble/setup.bash
+colcon build
+source install/setup.bash
+ROS_DOMAIN_ID=42 ros2 launch axon_bringup pi_core.launch.py
+```
+
+Optional systemd service:
+
+```bash
+sudo sed -i 's|/home/pi/Axon-ros|/path/to/axon|g' scripts/axon_pi.service
+sudo cp scripts/axon_pi.service /etc/systemd/system/axon_pi.service
+sudo systemctl daemon-reload
+sudo systemctl enable --now axon_pi.service
+```
+
 ### Pi (Domain 42, Docker)
 
 ```bash
@@ -68,7 +89,7 @@ ROS_DOMAIN_ID=43 ros2 run axon_operator_console operator_console
 
 ## Production Demo (End-to-End)
 
-1. Bring up Pi core with Docker.
+1. Bring up Pi core (native or Docker).
 2. Bring up the gateway containers on the laptop.
 3. Launch the operator console.
 4. Confirm camera preview (future extension), power/audio status, and gateway status.
