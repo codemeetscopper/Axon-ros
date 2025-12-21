@@ -1,0 +1,7 @@
+float32 output_volume_0_1
+bool mic_muted
+bool speaker_muted
+string admin_token
+---
+bool ok
+string message

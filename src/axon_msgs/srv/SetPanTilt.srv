@@ -1,0 +1,7 @@
+float32 pan_deg
+float32 tilt_deg
+float32 speed_deg_s
+string admin_token
+---
+bool ok
+string message

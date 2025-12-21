@@ -1,0 +1,12 @@
+class Limits:
+    VOLUME_MIN = 0.0
+    VOLUME_MAX = 1.0
+    PAN_MIN_DEG = -90.0
+    PAN_MAX_DEG = 90.0
+    TILT_MIN_DEG = -45.0
+    TILT_MAX_DEG = 45.0
+    PWM_SAFE_CHANNELS = [0, 1, 2, 3]
+    PWM_DUTY_MIN = 0
+    PWM_DUTY_MAX = 65535
+    PWM_FREQ_MIN = 40
+    PWM_FREQ_MAX = 400
