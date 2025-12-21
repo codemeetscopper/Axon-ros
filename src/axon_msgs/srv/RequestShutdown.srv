@@ -1,0 +1,5 @@
+string reason
+string admin_token
+---
+bool ok
+string message
