@@ -1,0 +1,30 @@
+axon_power:
+  ros__parameters:
+    machine_id: "pi"
+    backend: "mock"
+    low_battery_pct: 0.2
+    shutdown_delay_s: 60.0
+    admin_token_path: "~/.axon/admin_token"
+axon_audio:
+  ros__parameters:
+    machine_id: "pi"
+    backend: "mock"
+    output_device: "default"
+    input_device: "default"
+    volume: 0.5
+    admin_token_path: "~/.axon/admin_token"
+axon_pwm:
+  ros__parameters:
+    backend: "mock"
+    i2c_bus: 1
+    i2c_address: 64
+    allowed_channels: [0, 1, 2, 3]
+    admin_token_path: "~/.axon/admin_token"
+axon_diagnostics:
+  ros__parameters:
+    machine_id: "pi"
+axon_mode_manager:
+  ros__parameters:
+    admin_token_path: "~/.axon/admin_token"
+axon_watchdog:
+  ros__parameters: {}

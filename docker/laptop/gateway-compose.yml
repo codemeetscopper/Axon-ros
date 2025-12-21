@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  humble_sidecar:
+    image: ros:humble-ros-base
+    network_mode: host
+    environment:
+      - ROS_DOMAIN_ID=42
+    volumes:
+      - ../../:/workspace
+    command: ["/bin/bash", "-c", "sleep infinity"]
+  jazzy_sidecar:
+    image: ros:jazzy-ros-base
+    network_mode: host
+    environment:
+      - ROS_DOMAIN_ID=43
+    volumes:
+      - ../../:/workspace
+    command: ["/bin/bash", "-c", "sleep infinity"]
+  allowlist_bridge:
+    image: ros:jazzy-ros-base
+    network_mode: host
+    environment:
+      - ROS_DOMAIN_ID=43
+    volumes:
+      - ../../:/workspace
+    command: ["/bin/bash", "-c", "python3 /workspace/scripts/axon_gateway.py"]

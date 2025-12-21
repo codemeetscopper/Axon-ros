@@ -1,0 +1,18 @@
+FROM ros:humble-ros-base
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3-pip \
+    python3-venv \
+    python3-numpy \
+    python3-opencv \
+    alsa-utils \
+    i2c-tools \
+    espeak-ng \
+  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+COPY . /workspace
+RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build"
+
+ENTRYPOINT ["/bin/bash", "-c"]
+CMD ["source /opt/ros/humble/setup.bash && source /workspace/install/setup.bash && ros2 launch axon_bringup pi_core.launch.py"]

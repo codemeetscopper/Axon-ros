@@ -1,0 +1,14 @@
+builtin_interfaces/Time stamp
+string machine_id
+float32 bus_v
+float32 bus_a
+float32 battery1_v
+float32 battery1_pct
+float32 battery2_v
+float32 battery2_pct
+bool ups1_present
+bool ups2_present
+bool external_power_present
+bool on_battery
+bool low_battery
+string last_power_event

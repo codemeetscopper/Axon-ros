@@ -1,0 +1,8 @@
+builtin_interfaces/Time stamp
+string machine_id
+string output_device
+string input_device
+float32 output_volume_0_1
+bool mic_muted
+bool speaker_muted
+string last_audio_event

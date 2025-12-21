@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>axon_bringup</name>
+  <version>0.1.0</version>
+  <description>Launch and config for Axon bringup.</description>
+  <maintainer email="dev@axon.invalid">Axon Dev</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>axon_power</exec_depend>
+  <exec_depend>axon_audio</exec_depend>
+  <exec_depend>axon_pwm</exec_depend>
+  <exec_depend>axon_system</exec_depend>
+</package>

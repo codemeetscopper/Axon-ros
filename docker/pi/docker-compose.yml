@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  axon_pi:
+    build:
+      context: ../..
+      dockerfile: docker/pi/Dockerfile.humble_pi
+    network_mode: host
+    privileged: true
+    volumes:
+      - /dev/video0:/dev/video0
+      - /dev/snd:/dev/snd
+      - /dev/i2c-1:/dev/i2c-1
+      - ~/.axon:/root/.axon
+    environment:
+      - ROS_DOMAIN_ID=42
