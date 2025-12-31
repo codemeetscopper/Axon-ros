@@ -122,6 +122,10 @@ class MockChassisServer:
                 client_sock, addr = self._server.accept()
             except socket.timeout:
                 continue
+            except OSError:
+                if self._stop.is_set():
+                    break
+                raise
             client = ClientConnection(client_sock, addr)
             with self._lock:
                 self._clients.append(client)

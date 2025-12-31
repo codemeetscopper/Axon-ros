@@ -22,10 +22,11 @@ class AxonControlCenter(QtWidgets.QMainWindow):
 
         container = QtWidgets.QWidget()
         layout = QtWidgets.QHBoxLayout(container)
-        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setContentsMargins(12, 12, 12, 12)
+        layout.setSpacing(12)
 
         self.nav = QtWidgets.QListWidget()
-        self.nav.setFixedWidth(220)
+        self.nav.setFixedWidth(240)
         self.stack = QtWidgets.QStackedWidget()
 
         layout.addWidget(self.nav)
@@ -42,6 +43,9 @@ class AxonControlCenter(QtWidgets.QMainWindow):
         self.nav.setCurrentRow(0)
 
     def _swap_component(self, index: int) -> None:
+        if index < 0:
+            return
+        self.stack.setCurrentIndex(index)
         for idx, widget in enumerate(self._widgets):
             if idx == index:
                 widget.on_activate()

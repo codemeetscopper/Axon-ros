@@ -6,14 +6,14 @@ def build_stylesheet() -> str:
     QWidget {
         font-family: "Inter", "Segoe UI", "Helvetica", sans-serif;
         font-size: 12px;
-        color: #e6e7eb;
+        color: #1f2430;
     }
     QMainWindow {
-        background-color: #111318;
+        background-color: #f6f7fb;
     }
     QListWidget {
-        background-color: #0c0e12;
-        border: none;
+        background-color: #ffffff;
+        border: 1px solid #e5e7ef;
         padding: 8px;
     }
     QListWidget::item {
@@ -21,45 +21,46 @@ def build_stylesheet() -> str:
         border-radius: 8px;
     }
     QListWidget::item:selected {
-        background-color: #1f2430;
+        background-color: #e8ecf7;
     }
     QGroupBox {
-        border: 1px solid #1f2430;
+        border: 1px solid #d9dfea;
         border-radius: 10px;
         margin-top: 12px;
         padding: 12px;
-        background-color: #151922;
+        background-color: #ffffff;
     }
     QGroupBox::title {
         subcontrol-origin: margin;
         left: 10px;
         padding: 0 6px;
-        color: #9aa3b2;
+        color: #6b7385;
     }
     QLineEdit, QPlainTextEdit, QSpinBox, QDoubleSpinBox {
-        background-color: #0f1218;
-        border: 1px solid #1f2430;
+        background-color: #f4f6fb;
+        border: 1px solid #d9dfea;
         border-radius: 6px;
         padding: 6px;
     }
     QPushButton {
-        background-color: #2b3242;
+        background-color: #3b6ef5;
         border: none;
         border-radius: 8px;
         padding: 6px 12px;
+        color: #ffffff;
     }
     QPushButton:hover {
-        background-color: #364057;
+        background-color: #335fde;
     }
     QPushButton:disabled {
-        background-color: #1b202b;
-        color: #6c758a;
+        background-color: #d9dfea;
+        color: #8c93a3;
     }
     QLabel#SectionTitle {
         font-size: 16px;
         font-weight: 600;
     }
     QLabel#Muted {
-        color: #9aa3b2;
+        color: #6b7385;
     }
     """
