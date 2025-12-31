@@ -1,1 +1,0 @@
-"""Operator console package."""
