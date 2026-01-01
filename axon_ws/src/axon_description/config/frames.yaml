@@ -1,0 +1,6 @@
+frames:
+  base_link: "base_link"
+  base_footprint: "base_footprint"
+  odom: "odom"
+  imu: "imu_link"
+  camera: "camera_link"

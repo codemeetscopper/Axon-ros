@@ -1,0 +1,9 @@
+axon_audio_driver:
+  ros__parameters:
+    input_device: "default"
+    output_device: "default"
+    sample_rate: 16000
+    channels: 1
+    chunk_ms: 20
+    encoding: "pcm_s16le"
+    use_pulseaudio: false
