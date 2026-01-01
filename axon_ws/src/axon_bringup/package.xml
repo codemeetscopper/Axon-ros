@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>axon_bringup</name>
+  <version>0.1.0</version>
+  <description>Launch files and configuration profiles for Axon robot.</description>
+  <maintainer email="dev@axon.local">Axon Dev</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>axon_base_driver</exec_depend>
+  <exec_depend>axon_audio_driver</exec_depend>
+  <exec_depend>axon_hri_voice</exec_depend>
+  <exec_depend>axon_description</exec_depend>
+</package>

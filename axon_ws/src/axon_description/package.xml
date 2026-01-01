@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>axon_description</name>
+  <version>0.1.0</version>
+  <description>URDF and frame conventions for Axon robot.</description>
+  <maintainer email="dev@axon.local">Axon Dev</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>xacro</exec_depend>
+</package>
