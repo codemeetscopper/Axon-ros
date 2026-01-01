@@ -1,0 +1,3 @@
+axon_hri_voice:
+  ros__parameters:
+    passthrough_audio: true

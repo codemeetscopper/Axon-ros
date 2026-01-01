@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>axon_tests</name>
+  <version>0.1.0</version>
+  <description>Unit tests for Axon utilities and drivers.</description>
+  <maintainer email="dev@axon.local">Axon Dev</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <test_depend>pytest</test_depend>
+  <exec_depend>axon_utils</exec_depend>
+  <exec_depend>axon_base_driver</exec_depend>
+  <exec_depend>axon_audio_driver</exec_depend>
+</package>

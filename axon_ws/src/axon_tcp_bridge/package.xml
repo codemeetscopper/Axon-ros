@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>axon_tcp_bridge</name>
+  <version>0.1.0</version>
+  <description>TCP bridge architecture placeholder.</description>
+  <maintainer email="dev@axon.local">Axon Dev</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>axon_utils</exec_depend>
+</package>

@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install tooling
+        run: |
+          python -m pip install --upgrade pip
+          pip install black isort flake8 pytest
+      - name: Format check
+        run: |
+          black --check axon_ws/src
+          isort --check-only axon_ws/src
+      - name: Lint
+        run: flake8 --config pyproject.toml axon_ws/src
+      - name: Tests
+        run: pytest axon_ws/src

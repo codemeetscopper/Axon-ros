@@ -1,0 +1,7 @@
+axon_base_driver:
+  ros__parameters:
+    dry_run: true
+axon_audio_driver:
+  ros__parameters:
+    input_device: "default"
+    output_device: "default"

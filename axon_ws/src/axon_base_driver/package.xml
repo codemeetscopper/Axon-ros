@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>axon_base_driver</name>
+  <version>0.1.0</version>
+  <description>Serial chassis driver for Axon robot.</description>
+  <maintainer email="dev@axon.local">Axon Dev</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>axon_utils</exec_depend>
+  <exec_depend>axon_interfaces</exec_depend>
+  <exec_depend>pyserial</exec_depend>
+</package>
